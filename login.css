@@ -1,0 +1,31 @@
+.fet
+{
+margin-left: 30rem;
+margin-right: 30rem;
+}
+.fet1{
+    margin-left: 17rem;
+    margin-right: 17rem;
+}
+.Forgot a{
+    margin-left: 45rem;
+    color: darkslategrey;
+}
+.fet2 a{
+    color: darkslategrey;
+}
+.mar{
+    margin-left: 29rem;
+    margin-right: 29rem;
+}
+.au a{
+    color: darkslategrey;
+}
+.button a:hover{
+    color:black;
+}
+.container{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}

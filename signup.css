@@ -1,0 +1,23 @@
+.button a:hover{
+    color:black;
+}
+.container{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.form{
+    background-color: #fcfcfc; /* White background color for the form box */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: -4px -10px 33px 0px rgb(0, 0, 0);
+    width: 100%;
+    max-width: 500px;
+    margin:2em;
+}
+
+.form .mb-3{
+    padding:10px;
+    font-weight:bold;
+    display:block;
+}
