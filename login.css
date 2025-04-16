@@ -21,17 +21,7 @@ margin-right: 30rem;
 .au a{
     color: darkslategrey;
 }
-/* Error message styles */
-.fet error-message{
-    color: red;
-    font-size: 0.9rem;
-    margin-top: 0.2rem;
-}
 
-/* Red border for invalid inputs */
-input.is-invalid {
-    border: 1px solid red !important;
-}
 .toggle-password {
     position: absolute;
     top: 50%;
