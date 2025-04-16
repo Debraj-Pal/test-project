@@ -1,47 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const signupBtn = document.getElementById("signup-btn");
+    const loginBtn = document.querySelector("button");
+    
+    loginBtn.addEventListener("click", function () {
+        const email = document.getElementById("floatingInput").value.trim();
+        const password = document.getElementById("floatingPassword").value.trim();
 
-    signupBtn.addEventListener("click", function () {
-        const email = document.getElementById("signup-email");
-        const password = document.getElementById("signup-password");
-       
-
-        let valid = true;
-
-        // Clear previous errors
-        clearError(email, "email-error");
-        clearError(password, "password-error");
-
-        // Validate email
-        if (email.value.trim() === "") {
-            showError(email, "email-error", "Email is required.");
-            valid = false;
-        } else if (!email.value.includes("@")) {
-            showError(email, "email-error", "Invalid email address.");
-            valid = false;
+        // Basic validation
+        if (email === "" || password === "") {
+            alert("Please fill in all fields.");
+            return;
         }
 
-        // Validate password
-        if (password.value.trim() === "") {
-            showError(password, "password-error", "Password is required.");
-            valid = false;
-        } else if (password.value.length < 6) {
-            showError(password, "password-error", "Password must be at least 8 characters.");
-            valid = false;
-        }
+        // Dummy credentials (replace with backend validation later)
+        const dummyEmail = "user@example.com";
+        const dummyPassword = "123456";
 
-        
-
-        if (valid) {
-            // Store data temporarily
-            localStorage.setItem("userEmail", email.value);
-            localStorage.setItem("userPassword", password.value);
-
-            alert("Sign-up successful! 🎉 Please log in.");
-            window.location.href = "login.html";
+        if (email === dummyEmail && password === dummyPassword) {
+            alert("Login successful! 🎉");
+            window.location.href = "dashboard.html";
+        } else {
+            alert("Invalid email or password. Please try again.");
         }
     });
 });
+
 
 function togglePassword(id, toggleIcon) {
     const passwordInput = document.getElementById(id);
@@ -57,6 +39,5 @@ function togglePassword(id, toggleIcon) {
         icon.classList.add("bi-eye-slash");
     }
 }
-
 
 
